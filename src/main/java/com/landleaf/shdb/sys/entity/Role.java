@@ -2,7 +2,6 @@ package com.landleaf.shdb.sys.entity;
 
 import com.landleaf.shdb.common.BaseEntity;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.time.LocalDateTime;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -34,21 +33,6 @@ public class Role extends BaseEntity {
 
     @ApiModelProperty(value = "角色类型")
     private Integer roleType;
-
-    @ApiModelProperty(value = "是否可用")
-    private Integer delFlag;
-
-    @ApiModelProperty(value = "创建时间")
-    private LocalDateTime createTime;
-
-    @ApiModelProperty(value = "创建人")
-    private String createUser;
-
-    @ApiModelProperty(value = "更新时间")
-    private LocalDateTime updateTime;
-
-    @ApiModelProperty(value = "更新人")
-    private String updateUser;
 
 
 }
