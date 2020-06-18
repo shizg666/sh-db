@@ -55,17 +55,17 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/sh_db?useUnicode=true&useSSL=false&characterEncoding=utf8");
+        dsc.setUrl("jdbc:postgresql://134.175.92.62:5432/home_auto");
         // dsc.setSchemaName("public");
-        dsc.setDriverName("com.mysql.jdbc.Driver");
-        dsc.setUsername("root");
-        dsc.setPassword("1234");
+        dsc.setDriverName("org.postgresql.Driver");
+        dsc.setUsername("test");
+        dsc.setPassword("123456");
         mpg.setDataSource(dsc);
 
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setModuleName(scanner("模块名"));
-        pc.setParent("com.landleaf.shdb");
+        pc.setParent("com.landleaf.homeauto");
         mpg.setPackageInfo(pc);
 
         // 自定义配置
@@ -127,7 +127,8 @@ public class CodeGenerator {
         // 公共父类
         strategy.setSuperControllerClass("com.landleaf.shdb.common.BaseController");
         // 写于父类中的公共字段
-        strategy.setSuperEntityColumns("id", "del_flag", "create_time", "create_user", "update_time", "update_user");
+//        strategy.setSuperEntityColumns("id", "del_flag", "create_time", "create_user", "update_time", "update_user");
+        strategy.setSuperEntityColumns("id");
         strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setTablePrefix(pc.getModuleName() + "_");

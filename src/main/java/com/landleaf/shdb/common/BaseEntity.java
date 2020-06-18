@@ -21,24 +21,24 @@ public class BaseEntity extends Model<BaseEntity> {
     @TableField(fill = FieldFill.INSERT)
     private Long id;
 
-    @TableLogic
-    @TableField(fill = FieldFill.INSERT)
-    @ApiModelProperty(value = "是否可用")
-    private Integer delFlag;
-
-    @TableField(fill = FieldFill.INSERT)
-    @ApiModelProperty(value = "创建时间")
-    private LocalDateTime createTime;
-
-    @TableField(fill = FieldFill.INSERT)
-    @ApiModelProperty(value = "创建人")
-    private String createUser;
-
-    @TableField(fill = FieldFill.INSERT_UPDATE)
-    @ApiModelProperty(value = "更新时间")
-    private LocalDateTime updateTime;
-
-    @TableField(fill = FieldFill.INSERT_UPDATE)
-    @ApiModelProperty(value = "更新人")
-    private String updateUser;
+//    @TableLogic
+//    @TableField(fill = FieldFill.INSERT)
+//    @ApiModelProperty(value = "是否可用")
+//    private Integer delFlag;
+//
+//    @TableField(fill = FieldFill.INSERT)
+//    @ApiModelProperty(value = "创建时间")
+//    private LocalDateTime createTime;
+//
+//    @TableField(fill = FieldFill.INSERT)
+//    @ApiModelProperty(value = "创建人")
+//    private String createUser;
+//
+//    @TableField(fill = FieldFill.INSERT_UPDATE)
+//    @ApiModelProperty(value = "更新时间")
+//    private LocalDateTime updateTime;
+//
+//    @TableField(fill = FieldFill.INSERT_UPDATE)
+//    @ApiModelProperty(value = "更新人")
+//    private String updateUser;
 }
